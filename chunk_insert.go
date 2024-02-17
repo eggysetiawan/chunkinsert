@@ -1,6 +1,6 @@
 package chunkinsert
 
-func ChunkInsert(dest []interface{}, cls func(chunkData []interface{}), chunkSize int) {
+func ChunkInsert(dest []interface{}, cls func(chunkData interface{}), chunkSize int) {
 	// Calculate the number of chunks
 	numChunks := (len(dest) + chunkSize - 1) / chunkSize
 	// Start a transaction
